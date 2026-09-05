@@ -33,7 +33,8 @@ h2#tasks {
     margin-right: auto;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
     width: 100%;
     max-width: 450px;
     padding: 12px 15px;
@@ -46,7 +47,8 @@ input[type="text"] {
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
@@ -137,9 +139,13 @@ ul#itemsTasks li button:hover {
     margin-top: 5px;
     min-height: 20px;
 }
-
-/* حركة بسيطة لظهور المهام */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+.active {
+    background: #d4edda !important;  /* أخضر فاتح */
+}
+.waiting {
+    background: #f0f0f0 !important; /* رمادي فاتح */
+}
+.completed {
+    background: #cce5ff !important; /* أزرق فاتح */
+    text-decoration: line-through;
 }
